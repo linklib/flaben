@@ -1,0 +1,42 @@
+{
+  "name": "fliben_frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "startServer": "next start -p 3094",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.11.0",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.15.7",
+    "@mui/material-nextjs": "^5.15.7",
+    "@strapi/blocks-react-renderer": "^1.0.0",
+    "clsx": "^2.1.0",
+    "framer-motion": "^11.0.3",
+    "next": "^14.2.35",
+    "qs": "^6.11.2",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-imask": "^7.6.1",
+    "react-input-mask": "^3.0.0-alpha.2",
+    "recoil": "^0.7.7",
+    "sass": "^1.70.0",
+    "sharp": "^0.33.2",
+    "swiper": "^11.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/qs": "^6.9.11",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-input-mask": "^3.0.5",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,69 @@
+version: '3.8'
+
+services:
+  # База данных для Strapi
+  postgres:
+    image: postgres:15-alpine
+    container_name: strapi-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: strapi
+      POSTGRES_PASSWORD: strapi
+      POSTGRES_DB: strapi
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./database/init:/docker-entrypoint-initdb.d/  # Монтируем папку с дампом
+    ports:
+      - "5433:5432"
+    networks:
+      - app-network
+
+  # Strapi backend
+  strapi:
+    build: ./strapi
+    container_name: strapi-backend
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      DATABASE_NAME: strapi
+      DATABASE_USERNAME: strapi
+      DATABASE_PASSWORD: strapi
+      DATABASE_SSL: 'false'
+      NODE_ENV: production
+      APP_KEYS: "your-app-keys-here"  # Замените на реальные ключи
+      API_TOKEN_SALT: "your-token-salt"  # Замените на соль
+      ADMIN_JWT_SECRET: "your-jwt-secret"  # Замените на секрет
+      JWT_SECRET: "your-jwt-secret"  # Замените на секрет
+    volumes:
+      - strapi-uploads:/app/public/uploads
+    ports:
+      - "1337:1337"
+    networks:
+      - app-network
+
+  # Next.js frontend
+  nextjs:
+    build: ./nextjs
+    container_name: nextjs-frontend
+    restart: unless-stopped
+    depends_on:
+      - strapi
+    environment:
+      NEXT_PUBLIC_STRAPI_URL: http://strapi:1337
+      NEXT_PUBLIC_STRAPI_API_URL: http://strapi:1337/api
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres-data:
+  strapi-uploads:

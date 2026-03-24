@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_descriptions",
+  "info": {
+    "singularName": "about-description",
+    "pluralName": "about-descriptions",
+    "displayName": "Описание о компании",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "text",
+      "default": "Наша цель - это делать монтаж вентиляции простым и быстрым в домах любой сложности.  Мы поднимаем качество жизни людей, помогая создать благоприятный климат в доме."
+    }
+  }
+}

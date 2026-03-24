@@ -1,0 +1,32 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  height: 1lh;
+
+  span {
+    transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition: $base-transition-duration;
+  }
+
+  span:first-child {
+    position: relative;
+    top: 0;
+  }
+
+  span:last-child {
+    position: absolute;
+    bottom: -100%;
+  }
+
+  &:hover {
+    @include text-spinner-hover()
+  }
+
+
+}
+

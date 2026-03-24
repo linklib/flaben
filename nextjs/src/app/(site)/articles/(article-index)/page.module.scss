@@ -1,0 +1,22 @@
+@import "@/style/variables";
+@import "@/style/mixins";
+
+.container {
+}
+
+
+.projects {
+  display: grid;
+  gap: 3.25rem;
+
+  &__filters {
+
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.75rem;
+    row-gap: 3.25rem;
+  }
+}

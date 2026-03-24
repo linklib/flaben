@@ -1,0 +1,44 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  display: grid;
+  background-color: white;
+  grid-template-rows: auto 1fr;
+  width: 35rem;
+  padding: 0 2.75rem 2.75rem 2.75rem;
+  gap: 5rem;
+  color: hsla(209, 21, 25, 1);
+  height: 100%;
+  overflow-y: auto;
+
+  @include site-mobile-breakpoint {
+    width: 30rem;
+  }
+}
+
+.header {
+  position: sticky;
+  padding-top: 2.75rem;
+  top: 0;
+  background-color: white;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5rem;
+  z-index: $header-z-index;
+
+  &__close {
+    cursor: pointer;
+
+    svg {
+      transform: rotateZ(45deg);
+    }
+  }
+}
+
+.body {
+  display: grid;
+}

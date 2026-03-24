@@ -1,0 +1,60 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+$decor-height: 0.625rem;
+$button-decor-height: 0.75rem;
+$border-color: $secondary-color;
+
+@mixin decorator {
+  position: absolute;
+  content: '';
+  width: calc(100% - 1px);
+  border-left: 0.0625rem solid $border-color;
+  border-right: 0.0625rem solid $border-color;
+  height: $decor-height;
+  transition: border-color $base-transition-duration;
+}
+
+
+.container {
+  position: relative;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  padding: $decor-height;
+  color: inherit;
+
+  &:before {
+    border-top: 0.0625rem solid $border-color;
+    border-top-right-radius: $image-border-radius;
+    border-top-left-radius: $image-border-radius;
+    top: 0;
+    @include decorator()
+  }
+
+  &:after {
+    border-bottom: 0.0625rem solid $border-color;
+    border-bottom-right-radius: $image-border-radius;
+    border-bottom-left-radius: $image-border-radius;
+    bottom: 0;
+    @include decorator()
+  }
+
+  &_active {
+    color: $primary-color
+  }
+
+  &_button {
+    padding: $button-decor-height 2rem;
+
+    &:after &:before {
+      height: $button-decor-height;
+    }
+  }
+
+  @include hover {
+    &:hover {
+      @include decor-hover()
+    }
+  }
+}

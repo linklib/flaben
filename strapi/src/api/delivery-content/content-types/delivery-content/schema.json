@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "delivery_contents",
+  "info": {
+    "singularName": "delivery-content",
+    "pluralName": "delivery-contents",
+    "displayName": "Доставка контент"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.sekcziya-sajta"
+    }
+  }
+}

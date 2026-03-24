@@ -1,0 +1,31 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+$table-cell-gap: 0.75rem;
+$table-cell-side-gap: calc($table-cell-gap * 2);
+
+
+:export {
+  primaryColor: $primary-color;
+  buttonBackgroundColor: hsla(134, 61, 35, 0.05);
+  buttonBackgroundHoverColor: hsla(134, 61, 35, 0.10);
+  buttonPadding: 0.5625rem 1.25rem;
+  buttonContainedPadding: 0.5625rem 2.0625rem;
+  secondaryColor: $secondary-color;
+  textSecondaryColor: $app-text-secondary-color;
+  menuBorderRadius: 1.25rem;
+  inputBackground: hsla(209, 21, 25, .07);
+  inputLabelColor: hsla(209, 21, 25, .5);
+  inputBorderRadius: 0.5rem;
+  tableRowBorderRadius: 0.75rem;
+  paperBorderRadius: $paper-border-radius;
+  inputHead: 0.75rem;
+  headerCellFirstPadding: 0 $table-cell-gap 0 $table-cell-side-gap;
+  headerCellLastPadding: 0 $table-cell-side-gap 0 $table-cell-gap;
+  headerCellCommonPadding: 0 $table-cell-gap 0 $table-cell-gap;
+  tableCellFirstPadding: 1rem $table-cell-gap 1rem $table-cell-side-gap;
+  tableCellLastPadding: 1rem 1rem 1rem $table-cell-gap;
+  tableCellCommonPadding: 1rem $table-cell-gap;
+  tableGap: 0 0.5rem;
+  inputPadding: 1.03125rem 0.875rem
+}

@@ -1,0 +1,53 @@
+@use 'sass:color';
+
+//z
+$header-z-index: 1000;
+
+$header-top-space: 6.25rem;
+
+//colors
+
+//primary
+$primary-color: hsl(134, 61, 35);
+$secondary-color: hsla(137, 6%, 79%, 1);
+
+//red
+$red-color: hsla(4, 74%, 55%, 1);
+
+
+//primary-dark
+$primary-dark-color: hsla(151, 55, 26, 1);
+$primary-dark-a10-color: color.change($primary-dark-color, $alpha: 0.1);
+$primary-dark-a15-color: color.change($primary-dark-color, $alpha: 0.15);
+
+
+$background-color: hsla(220, 24, 96, 100%);
+$input-background-color: hsla(210, 8, 95, 100%);
+$image-background: hsla(216, 24, 96, 1);
+$paper-background-color: white;
+
+
+//text-colors
+$app-text-primary-color: hsla(209, 21, 25, 1);
+$app-text-secondary-color: color.change($app-text-primary-color, $alpha: 0.6);
+
+
+//breakpoints
+$xs-breakpoint: 600px;
+$md-breakpoint: 900px;
+$lg-breakpoint: 1200px;
+
+
+//paddings
+$site-side-padding: 2.5rem;
+$site-side-mobile-padding: 1.25rem;
+
+
+//brads
+$paper-border-radius: 1.25rem;
+$icon-border-radius: 0.75rem;
+$image-border-radius: 0.5rem;
+$scrollbar-border-radius: 0.125rem;
+
+//transitions
+$base-transition-duration: .3s

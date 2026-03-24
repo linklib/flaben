@@ -1,0 +1,114 @@
+@import "@/style/variables";
+@import "@/style/mixins";
+
+.container {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+
+  @include site-middle-breakpoint {
+    grid-auto-flow: row;
+    grid-template-columns: unset;
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem 8.8125rem 3rem 3rem;
+
+  @include site-tablet-breakpoint {
+    padding: 3rem;
+  }
+
+  @include site-middle-breakpoint {
+    padding: 2rem;
+  }
+
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  &__title {
+    @include text-h1();
+
+    //span {
+    //  font-weight: normal;
+    //}
+  }
+
+  &__description {
+    white-space: pre-wrap;
+    color: $app-text-secondary-color;
+    @include text-site-body-20();
+
+
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    color: $app-text-secondary-color;
+    align-items: flex-start;
+  }
+}
+
+.categories {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.category {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr auto;
+  gap: 2.3125rem;
+  padding: 0.75rem;
+
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    padding: 1.25rem 0 1.25rem 1.25rem;
+    gap: 4rem;
+
+  }
+
+  &__image {
+    position: relative;
+    width: 17.4375rem;
+    background-color: $image-background;
+    mix-blend-mode: multiply;
+    border-radius: $image-border-radius;
+
+    @include site-mobile-breakpoint {
+      //display: none;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+
+  &__description {
+    height: 3lh;
+    line-height: 150%;
+    color: $app-text-secondary-color;
+    word-break: break-word;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: flex-start;
+  }
+}

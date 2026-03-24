@@ -1,0 +1,17 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  display: grid;
+  align-items: flex-start;
+  padding-top: 5.5rem;
+}
+
+.breadcrumbs {
+
+}
+
+.block {
+  display: grid;
+}

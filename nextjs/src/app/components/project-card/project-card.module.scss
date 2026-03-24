@@ -1,0 +1,35 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.project {
+  display: grid;
+  background-color: white;
+  gap: 3.875rem;
+  height: 100%;
+  padding: 0.75rem 0.75rem 1.5rem 0.75rem;
+  border-radius: $paper-border-radius;
+
+  img {
+    border-radius: $image-border-radius;
+    transition: $base-transition-duration;
+    filter: saturate(0);
+  }
+
+  @include hover {
+    &:hover {
+      img {
+        filter: unset;
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    height: 20.5625rem;
+  }
+
+  &__title {
+    padding: 0 0.75rem;
+  }
+}

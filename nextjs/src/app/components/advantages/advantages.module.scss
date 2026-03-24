@@ -1,0 +1,95 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  border-radius: 2.5rem;
+  background: linear-gradient(124.76deg, hsla(151, 38%, 36%, 1) 0.37%, hsla(151, 70%, 20%, 1) 100%);
+  padding: 5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  color: white;
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 60%;
+
+    @include site-middle-breakpoint {
+      max-width: unset;
+    }
+  }
+
+  &__titleText {
+    @include text-section-title()
+  }
+
+  .advantages {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include site-middle-breakpoint {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    @include site-mobile-breakpoint {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include site-mobile-breakpoint {
+      gap: 3rem;
+    }
+  }
+
+  .advantage {
+    display: grid;
+    align-content: space-between;
+    height: 21.25rem;
+    padding: 0 1.625rem 1.625rem 0;
+    border-radius: $icon-border-radius;
+    transition: padding $base-transition-duration, background-color $base-transition-duration;
+    cursor: pointer;
+
+    @include site-middle-breakpoint {
+      padding: unset;
+    }
+
+    @include site-mobile-breakpoint {
+      gap: 1.5rem;
+      height: unset;
+    }
+
+    @include hover() {
+      &:hover {
+        background-color: hsla(0, 0, 100, 0.1);
+        padding: 1.625rem 1.625rem 1.625rem 1.625rem;
+      }
+    }
+
+    &__text {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    &__title {
+      @include text-h4()
+    }
+
+    &__description {
+      @include text-caption()
+    }
+
+    &__icon {
+      display: grid;
+      justify-content: flex-end;
+      opacity: .5;
+    }
+
+  }
+}
+
+

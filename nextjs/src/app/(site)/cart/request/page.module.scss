@@ -1,0 +1,85 @@
+@import "@/style/variables";
+@import "@/style/mixins";
+
+.containerWithBreadcrumbs {
+  padding-top: 5.5rem;
+  display: grid;
+  gap: 2.125rem;
+}
+
+.container {
+  display: grid;
+  gap: 2rem;
+
+  .form {
+    display: grid;
+    gap: 3.75rem;
+  }
+}
+
+.page {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 0.75rem;
+  align-items: flex-start;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr;
+
+  @include site-mobile-breakpoint {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+  }
+}
+
+.cart {
+  position: sticky;
+  top: $header-top-space;
+  background-color: white;
+  border-radius: $paper-border-radius;
+  z-index: 999;
+
+  @include site-mobile-breakpoint {
+    top: unset;
+    bottom: 0;
+  }
+}
+
+.paper {
+  padding: 2rem 2rem 2.5rem 2rem;
+}
+
+.title {
+}
+
+.segment {
+  display: grid;
+  gap: 2rem;
+}
+
+.inputs {
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: stretch;
+  gap: 1.75rem;
+
+  &_checkbox {
+    gap: 3.75rem;
+    justify-content: flex-start;
+    grid-template-columns: unset;
+  }
+}
+
+.error {
+  font-size: 16px;
+  color: #e14238;
+  line-height: 24px;
+}
+
+.segmentInner {
+  display: flex;
+  margin-left: 11px;
+  gap: 11px;
+}

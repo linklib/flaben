@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_param_values",
+  "info": {
+    "singularName": "product-param-value",
+    "pluralName": "product-param-values",
+    "displayName": "Значения параметров товаров"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "param": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product-param.product-param"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "values"
+    }
+  }
+}

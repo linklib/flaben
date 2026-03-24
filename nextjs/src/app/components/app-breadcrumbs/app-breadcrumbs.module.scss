@@ -1,0 +1,31 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  display: grid;
+  justify-content: flex-start;
+  grid-auto-flow: column;
+  gap: 0.25rem;
+}
+
+.link {
+  max-width: 40ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.active {
+  color: $app-text-secondary-color
+}
+
+.separator {
+  color: $app-text-secondary-color
+}
+
+.breadcrumb {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 0.25rem;
+}

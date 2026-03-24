@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "partners_advantages_headings",
+  "info": {
+    "singularName": "partners-advantages-heading",
+    "pluralName": "partners-advantages-headings",
+    "displayName": "Заголовок преимущества партнеров",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "default": "Преимущества работы с нами"
+    }
+  }
+}

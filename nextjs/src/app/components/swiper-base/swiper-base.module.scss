@@ -1,0 +1,19 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  min-width: 0;
+}
+
+
+.wrapper {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.swiperSlide {
+  display: grid;
+  flex-shrink: unset;
+}
+

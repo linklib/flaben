@@ -1,0 +1,51 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  position: relative;
+  display: grid;
+  width: 100%;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  @include site-middle-breakpoint {
+    grid-template-columns: auto 1fr;
+    gap: 3rem;
+    padding: 0.5rem;
+  }
+
+  @include site-mobile-breakpoint {
+    gap: 1.5rem;
+  }
+}
+
+
+.counter {
+  padding-left: 1.25rem;
+  color: $app-text-secondary-color;
+
+  @include site-middle-breakpoint {
+    padding-left: unset;
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+
+  svg {
+    transition: ease-out $base-transition-duration;
+  }
+
+  &__expanded {
+    svg {
+      transform: rotateZ(225deg);
+    }
+  }
+}

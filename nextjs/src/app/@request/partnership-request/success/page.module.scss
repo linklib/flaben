@@ -1,0 +1,17 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  position: relative;
+  display: grid;
+  align-content: flex-start;
+  text-align: center;
+  font-size: 2rem;
+  top: 20%;
+
+  span {
+
+    color: $primary-dark-color
+  }
+}

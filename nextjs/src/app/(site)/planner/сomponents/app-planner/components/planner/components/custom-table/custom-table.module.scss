@@ -1,0 +1,40 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  display: grid;
+  gap: 1.25rem;
+
+}
+
+.row {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 13rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+  grid-template-columns: 1fr 9.375rem;
+  border-bottom: 0.0625rem solid hsla(209, 21%, 25%, 0.1);
+  @include site-mobile-breakpoint {
+    gap: 1rem;
+    grid-template-columns: unset;
+    grid-auto-flow: row;
+    justify-content: unset;
+  }
+}
+
+.key {
+  color: $app-text-secondary-color;
+}
+
+.value {
+  display: grid;
+  text-align: end;
+
+  &_error {
+    color: $red-color;
+  }
+}
+

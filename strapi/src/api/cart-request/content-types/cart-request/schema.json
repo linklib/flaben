@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cart_requests",
+  "info": {
+    "singularName": "cart-request",
+    "pluralName": "cart-requests",
+    "displayName": "Заказ корзины",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "middleName": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": false
+    },
+    "city": {
+      "type": "string"
+    },
+    "street": {
+      "type": "string"
+    },
+    "flat": {
+      "type": "string"
+    },
+    "building": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "isCashPayment": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "@/style/variables";
+@import "@/style/mixins";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+
+.grid {
+  display: grid;
+  align-content: flex-start;
+  grid-gap: 1.5rem;
+  row-gap: 3.25rem;
+  grid-template-columns: repeat(4, 1fr);
+
+  @include site-middle-breakpoint {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include site-mobile-breakpoint {
+    grid-template-columns: 1fr;
+  }
+}

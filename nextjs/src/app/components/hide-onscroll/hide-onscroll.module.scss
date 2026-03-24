@@ -1,0 +1,15 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  position: sticky;
+  top: 0;
+  transition: $base-transition-duration;
+  transform: translateY(0);
+  z-index: $header-z-index;
+
+  &_hidden {
+    transform: translateY(-200%);
+  }
+}

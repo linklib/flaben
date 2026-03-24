@@ -1,0 +1,20 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  color: inherit;
+  transition: color $base-transition-duration;
+  width: max-content;
+
+  &_active {
+    color: $app-text-primary-color;
+  }
+
+
+  @include hover {
+    &:hover {
+      color: $app-text-primary-color;
+    }
+  }
+}

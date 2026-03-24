@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "articles_contents",
+  "info": {
+    "singularName": "articles-content",
+    "pluralName": "articles-contents",
+    "displayName": "Статьи контент"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.sekcziya-sajta"
+    }
+  }
+}

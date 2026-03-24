@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_params",
+  "info": {
+    "singularName": "product-param",
+    "pluralName": "product-params",
+    "displayName": "Параметры товаров",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "measure": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import "@/style/variables";
+@import "@/style/mixins";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 5.5rem;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: flex-start;
+  gap: 0.75rem;
+
+  @include site-middle-breakpoint {
+    flex-direction: column;
+    grid-template-columns: unset;
+  }
+}
+
+.cart {
+  position: sticky;
+  width: 100%;
+  top: $header-top-space;
+  height: max-content;
+  background-color: white;
+  border-radius: $paper-border-radius;
+  z-index: 999;
+
+  @include site-mobile-breakpoint {
+    top: unset;
+    bottom: 2rem;
+  }
+}
+
+.products {
+  flex-grow: 1;
+  padding: 1.25rem;
+}
+
+.placeholder {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 2rem 2.5rem 2rem;
+
+  &__title {
+    display: grid;
+    gap: 0.75rem;
+  }
+}

@@ -1,0 +1,52 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+
+}
+
+
+.info {
+  display: grid;
+  width: 23.1875rem;
+  padding: 1.25rem;
+  gap: 2.375rem;
+
+  @include site-middle-breakpoint {
+    width: unset;
+  }
+
+  &__info {
+    display: grid;
+    gap: 2.375rem;
+
+  }
+
+
+  &__details {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  &__row {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    gap: 1.4375rem;
+  }
+
+  &__field {
+    color: $app-text-secondary-color;
+  }
+
+  &__value {
+    font-weight: 500;
+  }
+}
+
+
+.buttons {
+  display: grid;
+  gap: 0.75rem;
+}

@@ -1,0 +1,54 @@
+@import "@/style/variables";
+@import "@/style/mixins";
+
+.container {
+  position: relative;
+  padding: 0 2rem 2rem 2rem;
+}
+
+.products {
+  display: grid;
+  gap: 3.25rem;
+  grid-template-rows: auto 1fr;
+
+
+  &__title {
+    padding-top: 2rem;
+  }
+
+  &__filters {
+    position: sticky;
+    display: grid;
+    top: -5rem;
+    z-index: 600;
+    background-color: white;
+    gap: 1.5rem;
+  }
+
+  &__filterInner {
+    position: relative;
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-content: flex-start;
+    grid-gap: 0.75rem;
+    row-gap: 3.25rem;
+
+    @include site-tablet-breakpoint {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include site-middle-breakpoint {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include site-mobile-breakpoint {
+      grid-template-columns: 1fr;
+
+    }
+  }
+}

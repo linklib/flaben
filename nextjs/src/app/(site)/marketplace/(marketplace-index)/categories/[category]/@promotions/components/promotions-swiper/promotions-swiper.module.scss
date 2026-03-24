@@ -1,0 +1,132 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  position: relative;
+  display: grid;
+  padding-left: $site-side-padding;
+  overflow: hidden;
+  padding-bottom: 4rem;
+
+  @include site-mobile-breakpoint {
+    padding-left: $site-side-mobile-padding;
+  }
+
+
+  &__inner {
+    width: 60%;
+    min-width: 0;
+
+    @include site-tablet-breakpoint {
+      width: 80%;
+    }
+
+    @include site-middle-breakpoint {
+      width: 90%;
+    }
+  }
+
+  &__swiper {
+    display: block;
+  }
+
+  .swiper {
+    position: unset;
+    overflow: unset;
+    display: grid;
+
+  }
+
+  .scrollbar {
+
+    &__container {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      padding-top: 2.4375rem;
+    }
+
+    position: relative;
+    height: 0.4rem;
+    width: 15.625rem;
+    border-radius: $scrollbar-border-radius;
+    background-color: change-color($primary-dark-a15-color, $saturation: 55%, $lightness: 26%);
+
+    &__draggable {
+      height: 100%;
+      background-color: $primary-dark-color;
+      border-radius: $scrollbar-border-radius;
+      cursor: pointer;
+    }
+  }
+
+  .promotion {
+    padding: 0.75rem;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    gap: 3.6875rem;
+
+    @include site-mobile-breakpoint {
+      gap: 1.5rem;
+    }
+
+
+    &__details {
+      display: flex;
+      flex-direction: column;
+      padding: 1.25rem;
+      justify-content: space-between;
+      grid-template-rows: 1fr auto;
+
+      @include site-mobile-breakpoint {
+
+      }
+    }
+
+    &__detailsInner {
+
+    }
+
+    &__title {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      align-content: flex-start;
+
+      > div {
+        white-space: pre-wrap;
+      }
+    }
+
+    &__description {
+      line-height: 150%;
+    }
+
+    &__date {
+      color: $app-text-secondary-color;
+    }
+
+    &__image {
+      background-color: $image-background;
+      position: relative;
+      overflow: hidden;
+      border-radius: $image-border-radius;
+      height: 25.125rem;
+      width: 25.125rem;
+      mix-blend-mode: multiply;
+
+      @include site-middle-breakpoint {
+        height: 15rem;
+        width: 15rem;
+      }
+
+
+      @include site-mobile-breakpoint {
+        width: 10rem;
+        height: 10rem;
+      }
+    }
+  }
+}

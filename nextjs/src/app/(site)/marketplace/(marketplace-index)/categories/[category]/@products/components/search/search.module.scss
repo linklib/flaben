@@ -1,0 +1,56 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  position: relative;
+  width: 100%;
+
+
+  input {
+    border: none;
+    padding: 1rem 1.25rem;
+    background-color: $input-background-color;
+    font-size: 1.125rem;
+    border-radius: $image-border-radius;
+    z-index: 999;
+
+    &::placeholder {
+      color: $app-text-secondary-color;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.search {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  left: -0.5rem;
+  padding: calc((var(--input-height) / 16 * 1rem) + 1.75rem) 0.5rem 0.5rem 0.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.125rem 1.375rem 0 rgba(0, 0, 0, 0.12);
+  background-color: $paper-background-color;
+  z-index: 900;
+
+  &__results {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-height: 25rem;
+    overflow-y: auto;
+  }
+
+  &__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 0;
+    gap: 1rem;
+    color: $app-text-secondary-color;
+  }
+}
+

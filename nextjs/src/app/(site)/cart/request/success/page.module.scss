@@ -1,0 +1,13 @@
+@import "@/style/variables";
+@import "@/style/mixins";
+
+.container {
+  display: grid;
+  gap: 2rem;
+  padding-top: 5.5rem;
+}
+
+.paper {
+  text-align: center;
+  padding: 2rem;
+}

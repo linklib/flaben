@@ -1,0 +1,15 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  padding: 0.75rem;
+  display: grid;
+  gap: 2rem;
+}
+
+
+.generalData {
+  display: grid;
+  gap: 2.5rem;
+}

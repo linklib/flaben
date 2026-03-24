@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "partners_advantages_descriptions",
+  "info": {
+    "singularName": "partners-advantages-description",
+    "pluralName": "partners-advantages-descriptions",
+    "displayName": "Описание преимущества партнеров",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "default": "Мы являемся крупнейшим производителем и интегратором современных систем вентиляции, которые улучшают качество жизни"
+    }
+  }
+}

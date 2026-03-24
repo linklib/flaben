@@ -1,0 +1,12 @@
+# Next.js
+.next/
+out/
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Build
+build/
+dist/

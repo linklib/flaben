@@ -1,0 +1,141 @@
+@import "./variables";
+
+// breakpoints
+@mixin site-mobile-breakpoint {
+  @media (max-width: $xs-breakpoint) {
+    @content;
+  }
+}
+
+@mixin site-middle-breakpoint {
+  @media (max-width: $md-breakpoint) {
+    @content;
+  }
+}
+
+@mixin site-tablet-breakpoint {
+  @media (max-width: $lg-breakpoint) {
+    @content;
+  }
+}
+
+// pseudo
+@mixin hover {
+  @media (hover: hover) {
+    @content;
+  }
+}
+
+@mixin text-h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+@mixin text-h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+@mixin text-h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+@mixin text-h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+@mixin text-h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+@mixin text-section-title {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
+@mixin text-site-body-20 {
+  font-size: 1.25rem;
+  line-height: 150%;
+}
+
+@mixin text-site-body-16 {
+  font-size: 1rem;
+  line-height: 150%;
+}
+
+@mixin text-block-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+@mixin text-block-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+@mixin text-details {
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 160%;
+}
+
+@mixin text-caption {
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 150%;
+}
+
+@mixin text-button {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+@mixin text-spinner-hover {
+  span:first-child {
+    top: -100%;
+  }
+
+  span:last-child {
+    bottom: 0;
+  }
+}
+
+@mixin decorator-hover {
+  border-left: 0.0625rem solid currentColor;
+  border-right: 0.0625rem solid currentColor;
+}
+
+@mixin decor-hover {
+  &:before {
+    border-top: 0.0625rem solid currentColor;
+    @include decorator-hover()
+  }
+
+  &:after {
+    border-bottom: 0.0625rem solid currentColor;
+    @include decorator-hover()
+  }
+}
+
+@mixin big-section-title {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: column;
+
+  @include site-middle-breakpoint {
+    grid-auto-flow: row;
+    grid-template-columns: unset;
+    gap: 1rem;
+  }
+}

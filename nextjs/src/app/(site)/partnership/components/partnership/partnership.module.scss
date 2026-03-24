@@ -1,0 +1,118 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  min-height: 31.875rem;
+
+  @include site-middle-breakpoint {
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+  }
+}
+
+.paper {
+  display: grid;
+  padding: 3.75rem;
+  gap: 2rem;
+
+  @include site-middle-breakpoint {
+    padding: 1.5rem;
+  }
+
+  &_outline {
+    border-radius: $paper-border-radius;
+    border: 0.0625rem solid hsla(209, 21, 25, 0.2);
+  }
+}
+
+.return {
+  display: flex;
+  align-items: center;
+  gap: 0.4375rem;
+
+  span {
+    color: $app-text-secondary-color
+  }
+}
+
+
+.content {
+  display: grid;
+  align-items: flex-start;
+  align-content: stretch;
+  gap: 2rem;
+  grid-template-rows: 1fr auto;
+
+  &__text {
+    display: grid;
+    gap: 2rem;
+  }
+}
+
+.title {
+  display: grid;
+
+  gap: 0.75rem;
+
+  &__section {
+    @include text-section-title()
+  }
+
+  &__text {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: 2lh;
+
+    @include site-middle-breakpoint {
+      height: 2lh;
+    }
+
+    span {
+      color: $primary-dark-color
+    }
+  }
+}
+
+.body {
+  line-height: 150%;
+  color: $app-text-secondary-color;
+
+  @include site-middle-breakpoint {
+    height: 2lh;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+
+  &__counter {
+    span {
+      color: $app-text-secondary-color;
+    }
+  }
+
+  &__actions {
+    display: flex;
+  }
+}
+
+.advantages {
+  @include site-middle-breakpoint {
+    order: 1;
+  }
+}
+
+.item {
+  @include site-middle-breakpoint {
+    order: 0;
+  }
+}

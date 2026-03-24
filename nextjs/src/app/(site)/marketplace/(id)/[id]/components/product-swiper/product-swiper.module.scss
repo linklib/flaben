@@ -1,0 +1,53 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  position: sticky;
+  top: $header-top-space;
+  display: grid;
+  gap: 0.75rem;
+  padding: 0.75rem 4.1875rem 0 4.1875rem;
+
+  @include site-middle-breakpoint {
+    padding: unset;
+  }
+}
+
+.swiper {
+  width: 100%;
+}
+
+
+.image {
+  position: relative;
+  height: 38.75rem;
+
+  @include site-middle-breakpoint {
+
+  }
+}
+
+.gallery {
+  height: 6.25rem;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 0.6875rem;
+  overflow-x: auto;
+
+  &__image {
+    position: relative;
+    opacity: .5;
+    width: 6.25rem;
+    transition: opacity $base-transition-duration;
+
+    &_active {
+      opacity: 1;
+    }
+
+    img {
+
+    }
+  }
+}

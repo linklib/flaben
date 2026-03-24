@@ -1,0 +1,44 @@
+{
+  "kind": "singleType",
+  "collectionName": "contacts",
+  "info": {
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Контакты",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstPhone": {
+      "type": "string",
+      "default": "+7 343 414-00-47"
+    },
+    "secondPhone": {
+      "type": "string",
+      "default": "+8 800 550-16-52"
+    },
+    "email": {
+      "type": "string",
+      "default": "info@fliben.ru"
+    },
+    "address": {
+      "type": "string",
+      "default": "г. Екатеринбург, ул. Павла Шаманова 5/5"
+    },
+    "youtubeLink": {
+      "type": "string",
+      "default": "https://www.youtube.com/@Fliben"
+    },
+    "waLink": {
+      "type": "string",
+      "default": "https://api.whatsapp.com/send/?phone=73434140047&text&type=phone_number&app_absent=0"
+    },
+    "tgLink": {
+      "type": "string",
+      "default": "https://t.me/+79122329543"
+    }
+  }
+}

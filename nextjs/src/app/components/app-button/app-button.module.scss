@@ -1,0 +1,57 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  display: grid;
+  grid-auto-flow: column;
+  color: $primary-color;
+  align-items: stretch;
+  grid-template-columns: auto 1fr auto;
+  min-width: max-content;
+
+  &__side {
+    display: grid;
+  }
+
+  &_red {
+    color: $red-color;
+  }
+
+  &:disabled {
+    color: $secondary-color;
+    cursor: not-allowed;
+  }
+
+  &__withDiagonalArrow {
+    svg {
+      transition: $base-transition-duration;
+      transform: rotateZ(-45deg);
+    }
+  }
+
+  @include hover {
+    &__withDiagonalArrow:hover {
+      svg {
+        transform: rotateZ(0);
+      }
+    }
+    &:hover .textSpinner {
+      @include text-spinner-hover()
+    }
+
+    &:hover .decor {
+      @include decor-hover()
+    }
+
+    &:hover:disabled {
+      color: $secondary-color;
+    }
+  }
+}
+
+//.sideComponent {
+//  //display: flex;
+//}
+
+

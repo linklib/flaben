@@ -1,0 +1,78 @@
+@import "@/style/variables";
+@import "@/style/mixins";
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: clamp(12px, 1vw, 48px);
+}
+
+html,
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: $background-color;
+  color: $app-text-primary-color
+}
+
+main {
+  display: grid;
+  align-items: flex-start;
+  gap: 8.5rem;
+  padding-top: 0.75rem;
+
+  @include site-middle-breakpoint {
+    gap: 5rem;
+  }
+}
+
+a {
+  color: inherit;
+  display: grid;
+  text-decoration: none;
+}
+
+
+h1, h2, h3, h4 {
+  margin: unset;
+  padding: unset;
+}
+
+button {
+  font-size: 1rem;
+  outline: unset;
+  border: unset;
+  background-color: unset;
+  cursor: pointer;
+  color: inherit;
+}
+
+h1 {
+  @include text-h1()
+}
+
+h2 {
+  @include text-h2()
+}
+
+h3 {
+  @include text-h3()
+}
+
+h4 {
+  @include text-h4()
+}
+
+h5 {
+  @include text-h5()
+}

@@ -1,0 +1,60 @@
+@import "@/style/variables";
+@import "@/style/mixins";
+
+.container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  height: 31.875rem;
+
+  @include site-middle-breakpoint {
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    height: unset;
+  }
+}
+
+.paper {
+  padding: 2rem;
+  align-content: space-between;
+  @include site-middle-breakpoint {
+    order: 1;
+    padding: 1.5rem;
+  }
+}
+
+.image {
+  display: grid;
+
+  @include site-middle-breakpoint {
+    height: 18rem;
+    order: 0;
+  }
+}
+
+.title {
+  display: grid;
+  gap: 1.25rem;
+
+
+  &__section {
+    @include text-section-title()
+  }
+
+  &__text {
+    color: $app-text-secondary-color;
+    line-height: 150%;
+  }
+}
+
+.footer {
+  display: grid;
+  justify-items: flex-start;
+  gap: 1.75rem;
+
+  &__caption {
+    color: $app-text-secondary-color;
+  }
+}
+

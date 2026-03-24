@@ -1,0 +1,43 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: space-between;
+  padding: 0.75rem 0.5rem;
+  gap: 2rem;
+
+  @include site-middle-breakpoint {
+    padding: 1.75rem 0.5rem;
+    justify-content: unset;
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    column-gap: 2rem;
+    row-gap: 1lh;
+    color: $app-text-secondary-color;
+    transition: $base-transition-duration;
+
+
+  }
+
+  &__item {
+    width: max-content;
+  }
+}
+
+.el {
+  @include site-middle-breakpoint {
+    display: none;
+  }
+}
+
+.active {
+  color: $app-text-primary-color
+}

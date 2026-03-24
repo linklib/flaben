@@ -1,0 +1,27 @@
+@import "@/style/variables";
+@import "@/style/mixins";
+
+.projects {
+  display: grid;
+  gap: 3.25rem;
+
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.75rem;
+    row-gap: 3.25rem;
+
+    @include site-tablet-breakpoint {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include site-middle-breakpoint {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include site-mobile-breakpoint {
+      grid-template-columns: 1fr;
+    }
+  }
+}

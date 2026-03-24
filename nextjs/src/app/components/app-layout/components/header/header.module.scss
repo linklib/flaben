@@ -1,0 +1,65 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-content: baseline;
+  padding: 1.5rem 1.75rem;
+  background-color: $paper-background-color;
+  border-bottom-left-radius: $paper-border-radius;
+  border-bottom-right-radius: $paper-border-radius;
+
+  @include site-mobile-breakpoint {
+    gap: 1rem;
+    padding: 1.5rem 1.5rem;
+  }
+}
+
+.right {
+  display: flex;
+  gap: 5.5rem;
+
+  @include site-mobile-breakpoint {
+    gap: 1.5rem;
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 5.5rem;
+
+  @include site-middle-breakpoint {
+    display: none;
+  }
+
+  @include site-tablet-breakpoint {
+    & ul:last-child {
+      display: none;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 2rem;
+
+  @include site-mobile-breakpoint {
+    gap: 1rem;
+  }
+
+  &__menuButtonText {
+    @include site-mobile-breakpoint {
+
+      display: none;
+
+    }
+  }
+
+  &__counter {
+    min-width: 3ch;
+  }
+}
+
+

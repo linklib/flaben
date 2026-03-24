@@ -1,0 +1,30 @@
+@import "@/style/variables";
+@import "@/style/mixins";
+
+.container {
+  display: grid;
+  gap: 3.25rem;
+}
+
+.header {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr auto;
+}
+
+
+.swiperButtons {
+  display: grid;
+  grid-auto-flow: column;
+
+  &__next {
+    position: relative;
+  }
+
+  &__previous {
+    position: relative;
+  }
+}
+
+
+

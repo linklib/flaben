@@ -1,0 +1,25 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary-dark-a10-color;
+  border-radius: $icon-border-radius;
+
+  svg {
+    color: $primary-dark-color;
+    transition: $base-transition-duration;
+    transform: scale(1);
+  }
+
+  &:active {
+    svg {
+      transform: scale(.9);
+    }
+  }
+}

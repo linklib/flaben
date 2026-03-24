@@ -1,0 +1,36 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3.25rem;
+}
+
+.title {
+  @include big-section-title();
+
+
+  &__titleText {
+    span {
+      color: $primary-dark-color;
+    }
+  }
+
+  &__titleSection {
+    @include text-section-title()
+  }
+}
+
+.systems {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  &__details {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+  }
+}

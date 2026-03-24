@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "projects_contents",
+  "info": {
+    "singularName": "projects-content",
+    "pluralName": "projects-contents",
+    "displayName": "Проекты контент"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.sekcziya-sajta"
+    }
+  }
+}

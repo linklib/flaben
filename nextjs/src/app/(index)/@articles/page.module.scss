@@ -1,0 +1,54 @@
+@import "@/style/variables";
+@import "@/style/mixins";
+
+.container {
+  display: grid;
+  flex-direction: column;
+  gap: 3.25rem;
+}
+
+.header {
+  @include big-section-title()
+}
+
+.sectionTitle {
+  @include text-section-title()
+}
+
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 3.25rem;
+
+  &__titleText {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      color: $primary-dark-color
+    }
+  }
+}
+
+.actions {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr auto;
+  gap: 2.5rem;
+}
+
+.swiperButtons {
+  display: flex;
+
+  &__next {
+    position: relative;
+  }
+
+  &__previous {
+    position: relative;
+  }
+}
+
+
+

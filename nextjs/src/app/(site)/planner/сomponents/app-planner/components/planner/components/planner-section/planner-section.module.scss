@@ -1,0 +1,39 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.header {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  padding: 0.75rem;
+}
+
+.logo {
+  opacity: .2;
+  scale: .8;
+
+  @include site-middle-breakpoint {
+    display: none;
+  }
+}
+
+.title {
+  width: 80ch;
+  color: $app-text-secondary-color;
+
+  @include site-middle-breakpoint {
+    width: unset;
+  }
+}
+
+.body {
+  border-radius: $image-border-radius;
+  padding: 1.5rem;
+  background-color: $background-color;
+}

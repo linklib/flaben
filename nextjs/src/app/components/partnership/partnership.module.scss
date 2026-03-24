@@ -1,0 +1,116 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  padding: 5rem 2.5rem 7.75rem 2.5rem;
+  gap: 4.5rem;
+  background-color: hsla(151, 38%, 36%, 0.15);
+  border-radius: 2.5rem;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: '';
+    width: 20.0625rem;
+    height: 100%;
+    background: linear-gradient(262.29deg, #D7E3E0 7.44%, rgba(215, 227, 224, 0) 93.68%);
+    z-index: 2;
+
+    @include site-middle-breakpoint {
+      width: 5rem;
+    }
+  }
+
+  &__title {
+    display: grid;
+    justify-content: center;
+    gap: 1.25rem;
+    text-align: center;
+    color: $primary-dark-color;
+  }
+
+  &__titleText {
+    @include text-section-title()
+  }
+
+  &__subtitleText {
+    @include text-h2()
+  }
+
+  &__swiper {
+    position: relative;
+    display: block;
+    min-width: 0;
+  }
+
+  .swiper {
+    overflow: unset;
+    display: grid;
+  }
+
+  .scrollbar {
+    bottom: -2.75rem;
+    top: unset;
+    left: unset;
+    width: 15.625rem;
+    display: grid;
+    justify-self: center;
+    border-radius: $scrollbar-border-radius;
+    background-color: change-color($primary-dark-a15-color, $saturation: 55%, $lightness: 26%);
+
+    &__draggable {
+      background-color: $primary-dark-color;
+      border-radius: $scrollbar-border-radius;
+    }
+  }
+
+  .advantage {
+    display: grid;
+    gap: 3.0625rem;
+    align-content: space-between;
+    padding: 1.5rem;
+    background-color: $primary-dark-a15-color;
+    border-radius: $icon-border-radius;
+    color: $primary-dark-color;
+    height: 100%;
+    cursor: pointer;
+
+    &__text {
+      display: grid;
+      gap: 1.25rem;
+
+    }
+
+    &__title {
+
+      font-weight: 500;
+      @include text-h4()
+    }
+
+    &__description {
+      @include text-caption()
+    }
+
+    &__badge {
+      display: grid;
+      align-content: center;
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 120%;
+      background-color: hsla(170, 17%, 86%, 1);
+      width: 3.25rem;
+      height: 3.25rem;
+      border-radius: $image-border-radius;
+      font-weight: 500;
+    }
+  }
+
+
+}
+
+

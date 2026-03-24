@@ -1,0 +1,20 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  height: max-content;
+  width: fit-content;
+  border-radius: 0.3125rem;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+
+  &__opacity {
+    background-color: hsla(225, 100, 100, 0.5);
+  }
+
+  &__white {
+    background-color: white
+  }
+}

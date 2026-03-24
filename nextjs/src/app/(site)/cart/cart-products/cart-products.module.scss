@@ -1,0 +1,70 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  flex-grow: 1;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  align-items: flex-start;
+}
+
+
+.product {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 1.25rem;
+  border-bottom: 0.0625rem solid hsla(209, 21, 25, .1);
+
+  @include site-middle-breakpoint {
+    grid-auto-flow: row;
+    gap: 1rem;
+  }
+
+  &_last {
+    border-bottom: unset;
+    padding-bottom: unset;
+  }
+}
+
+.title {
+  display: flex;
+  gap: 1.25rem;
+
+  @include site-middle-breakpoint {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.image {
+  position: relative;
+  min-height: 3.75rem;
+  width: 3.75rem;
+  border-radius: $image-border-radius;
+  background-color: $image-background;
+
+  img {
+    padding: 0.625rem;
+  }
+}
+
+.name {
+  width: 40ch;
+  line-height: 150%;
+
+  @include site-middle-breakpoint {
+    width: unset;
+  }
+}
+
+.price {
+  width: 9ch;
+  font-weight: 500;
+}
+
+.button {
+  min-width: 9rem;
+}

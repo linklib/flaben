@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "title_headings",
+  "info": {
+    "singularName": "title-heading",
+    "pluralName": "title-headings",
+    "displayName": "Заголовок главного блока",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "default": "Системы вентиляции"
+    }
+  }
+}

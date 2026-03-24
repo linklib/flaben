@@ -1,0 +1,15 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  border-radius: $paper-border-radius;
+  background-color: $paper-background-color;
+
+  &__noOverflow {
+    overflow: unset;
+  }
+}

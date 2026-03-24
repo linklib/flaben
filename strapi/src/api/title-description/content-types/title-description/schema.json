@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "title_descriptions",
+  "info": {
+    "singularName": "title-description",
+    "pluralName": "title-descriptions",
+    "displayName": "Описание главного блока",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "blocks"
+    }
+  }
+}

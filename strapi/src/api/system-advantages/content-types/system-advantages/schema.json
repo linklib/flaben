@@ -1,0 +1,51 @@
+{
+  "kind": "singleType",
+  "collectionName": "systems_advantages",
+  "info": {
+    "singularName": "system-advantages",
+    "pluralName": "systems-advantages",
+    "displayName": "Преимущества систем"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Особенности и преимущества наших систем, которые стоит знать"
+    },
+    "firstAdvantageTitle": {
+      "type": "string",
+      "default": "Быстрый монтаж и пусконаладка"
+    },
+    "firstAdvantageDescription": {
+      "type": "string",
+      "default": "Коллекторная схема распределения воздуховодов обеспечивает точную балансировку системы"
+    },
+    "secondAdvantageTitle": {
+      "type": "string",
+      "default": "Тишина"
+    },
+    "secondAdvantageDescription": {
+      "type": "string",
+      "default": "Мы уделяем большое внимание поглощению шума, предлагая не только традиционные шумоглушители, но шумопоглащающие распределительные коллекторы"
+    },
+    "thirdAdvantageTitle": {
+      "type": "string",
+      "default": "Дизайн"
+    },
+    "thirdAdvantageDescription": {
+      "type": "string",
+      "default": "Компактные размеры воздуховодов экономят пространство, они интегрируются в любые конструктивные решения вашего дома. Все наши решения обладают инженерной красотой"
+    },
+    "fourthAdvantageTitle": {
+      "type": "string",
+      "default": "Совместимость и комплексность системы"
+    },
+    "fourthAdvantageDescription": {
+      "type": "string",
+      "default": "Все компоненты наших систем идеально согласуются между собой, обеспечивая простоту проектирования и монтажа"
+    }
+  }
+}

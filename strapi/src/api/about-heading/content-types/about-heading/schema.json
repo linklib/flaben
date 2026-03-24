@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_headings",
+  "info": {
+    "singularName": "about-heading",
+    "pluralName": "about-headings",
+    "displayName": "Заголовок о компании",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "default": " Fliben - это передовые решения на рынке систем вентиляции, соответствующие самым высоким европейским стандартам"
+    }
+  }
+}

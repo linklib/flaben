@@ -1,0 +1,45 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 0.75rem;
+  align-items: flex-start;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr;
+
+  @include site-middle-breakpoint {
+    grid-auto-flow: row;
+    grid-template-columns: unset;
+  }
+}
+
+.total {
+  top: $header-top-space;
+  position: sticky;
+
+  @include site-middle-breakpoint {
+    top: unset;
+    bottom: 0;
+  }
+}
+
+.placeholder {
+  display: grid;
+  height: 100%;
+  align-items: center;
+  line-height: 150%;
+  text-align: center;
+  font-weight: 500;
+  color: $app-text-secondary-color;
+
+  @include site-middle-breakpoint {
+    padding: 5rem 10rem;
+  }
+
+  @include site-mobile-breakpoint {
+    padding: 2rem;
+  }
+}

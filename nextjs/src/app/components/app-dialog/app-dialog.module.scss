@@ -1,0 +1,26 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  display: grid;
+  gap: 2.75rem;
+  padding: 0 2.75rem 9.1875rem 2.75rem;
+  overflow-y: auto;
+}
+
+.header {
+  display: grid;
+  padding: 2.75rem 0 1rem 0;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: $header-z-index;
+
+  svg {
+    transform: rotateZ(45deg);
+  }
+}

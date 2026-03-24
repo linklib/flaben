@@ -1,0 +1,23 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  overflow: hidden;
+}
+
+.swiperContainer {
+  min-width: 0;
+  max-width: 85%;
+  padding-left: $site-side-padding;
+
+  @include site-mobile-breakpoint {
+    padding-left: $site-side-mobile-padding;
+  }
+}
+
+.swiper {
+  overflow: unset;
+}
+
+

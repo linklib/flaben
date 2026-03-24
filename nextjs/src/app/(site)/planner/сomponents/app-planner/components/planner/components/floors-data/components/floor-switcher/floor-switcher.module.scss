@@ -1,0 +1,31 @@
+@import "@/style/variables.scss";
+@import "@/style/mixins.scss";
+
+
+.container {
+  display: grid;
+  gap: 2rem;
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1.25rem;
+  justify-content: flex-start;
+  align-items: center;
+  width: max-content;
+}
+
+.button {
+  position: absolute;
+  right: -50%;
+  color: $primary-color
+}
+
+.deleteIcon {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: hsla(4, 74, 55, 1);
+}
