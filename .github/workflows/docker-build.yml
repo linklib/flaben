@@ -3,7 +3,7 @@ name: Build and Push Docker Images
 on:
   push:
     branches:
-      - main      # или твоя основная ветка, например master     
+      - master      # или твоя основная ветка, например master     
   workflow_dispatch:  # позволяет запускать вручную из интерфейса GitHub
 
 env:
