@@ -21,7 +21,7 @@ const nextConfig = {
   headers() {
     return [{ source: "/(.*)", headers: securityHeaders }];
   },
-  output: "standalone", // Важно для Docker
+  output: "standalone",
   httpAgentOptions: {
     keepAlive: false,
   },
@@ -31,23 +31,16 @@ const nextConfig = {
   },
 };
 
-// Локальная разработка
 const devEnv = {
   env: {
-    apiHost: "http://localhost:1337/api",
-    host: "http://localhost:3000",
+    apiHost: "http://127.0.0.1:1337/api",
   },
+  // env: {
+  //   apiHost: "https://fliben.ru/fliben-strapi/api",
+  //   host: "https://fliben.ru",
+  // },
 };
 
-// Тестовый стенд (test.flaben.ru)
-const testEnv = {
-  env: {
-    apiHost: "https://test.flaben.ru/api",
-    host: "https://test.flaben.ru",
-  },
-};
-
-// Продакшен (основной сайт)
 const prodEnv = {
   env: {
     apiHost: "https://fliben.ru/fliben-strapi/api",
@@ -55,59 +48,37 @@ const prodEnv = {
   },
 };
 
-// Rewrites для локальной разработки
 const devRewrites = {
   async rewrites() {
     return [
       {
         source: "/files/:path*",
-        destination: "http://localhost:1337/:path*",
+        destination: `http://127.0.0.1:1337/:path*`,
       },
+      // {
+      //     source: "/files/:path*",
+      //     destination: `http://89.111.141.25/fliben-strapi/:path*`,
+      // },
     ];
   },
 };
 
-// Rewrites для тестового стенда
-const testRewrites = {
-  async rewrites() {
-    return [
-      {
-        source: "/files/:path*",
-        destination: "https://test.flaben.ru/api/:path*",
-      },
-    ];
-  },
-};
-
-// Rewrites для продакшена
 const prodRewrites = {
   async rewrites() {
     return [
       {
         source: "/files/:path*",
-        destination: "https://fliben.ru/fliben-strapi/:path*",
+        destination: `https://fliben.ru/fliben-strapi/:path*`,
       },
     ];
   },
 };
 
 const nextDevConfig = { ...nextConfig, ...devEnv, ...devRewrites };
-const nextTestConfig = { ...nextConfig, ...testEnv, ...testRewrites };
 const nextProdConfig = { ...nextConfig, ...prodEnv, ...prodRewrites };
 
-export default (phase, { defaultConfig }) => {
-  // Проверяем переменную окружения для определения окружения
-  const environment = process.env.NEXT_PUBLIC_APP_ENV || 'production';
-  
-  if (phase === PHASE_DEVELOPMENT_SERVER) {
-    return nextDevConfig;
-  }
-  
-  // Для тестового стенда используем test конфиг
-  if (environment === 'test') {
-    return nextTestConfig;
-  }
-  
-  // Для продакшена
+export default (phase) => {
+  if (phase === PHASE_DEVELOPMENT_SERVER) return nextDevConfig;
+
   return nextProdConfig;
 };
