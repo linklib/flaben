@@ -34,7 +34,7 @@ export default function Page() {
               <div className={css.count}>
                 <div className={css.count__number}>01.</div>
               </div>
-              <h4>Протокол испытаний ISEGA GERMANY</h4>
+              <h4>Протокол испытаний ISEGA GERMANY..</h4>
               <Link
                 href={"/downloads/docs/testgermany.pdf"}
                 target={"_blank"}
