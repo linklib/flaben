@@ -32,7 +32,7 @@ export default function Page() {
           <div className={css.rows}>
             <AppPaper className={css.doc}>
               <div className={css.count}>
-                <div className={css.count__number}>01</div>
+                <div className={css.count__number}>01.</div>
               </div>
               <h4>Протокол испытаний ISEGA GERMANY</h4>
               <Link
